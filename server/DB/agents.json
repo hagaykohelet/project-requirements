@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "agentCode": "abc",
+    "fullName": "hagay kohelet",
+    "role": "admin",
+    "createdAt": "2026-03-08T08:47:57.350Z",
+    "hashPassword": "$2a$10$d6SUwAV3BM0Dr347ApPqY.j9C35ymmzdrb/n7IDL8WvoaBym5Rkny"
+  },
+  {
+    "id": 2,
+    "agentCode": "mn",
+    "fullName": "zack ws",
+    "role": "agent",
+    "createdAt": "2026-03-08T08:51:24.547Z",
+    "hashPassword": "$2a$10$h2iIv6xwGg/5X2KAWZguLO.dXDMVlx8R.ds5p615y71bRypFBccmW"
+  }
+]
