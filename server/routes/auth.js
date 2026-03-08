@@ -12,7 +12,8 @@ authRoute.post('/login', checkBodyAuth, async (req, res) => {
         const response = await fs.readFile('./DB/agents.json')
         const data = await JSON.parse(response)
         for (let agent of data) {
-            if (agent.agentCode === body.agentCode && verifyHashPassword(body.password, agent.hashPassword)) {
+
+            if (agent.agentCode === body.agentCode && await verifyHashPassword(body.password, agent.hashPassword)) {
                 const token = createToken(agent)
                 return res.status(200).json({ token: token, user: agent.id, agentCode: agent.agentCode, fullName: agent.fullName, role: agent.role })
             }
@@ -24,20 +25,12 @@ authRoute.post('/login', checkBodyAuth, async (req, res) => {
     }
 })
 
-authRoute.get('/me', (req, res)=>{
-    try{
-        const token = req.headers.token
-        console.log(token)
-        if(!token){
-            return res.status(401).json({error:"this token not allowed!"})
-        }
-        const verifyUserToken = verifyToken(token)
-        if(!verifyUserToken){
-            return res.status(401).json({error:"this token not verified!"})
-        }
-        return res.status(200).json({user: verifyUserToken})
+authRoute.get('/me', verifyToken, (req, res) => {
+    try {
+        const user = req.user
+        return res.status(200).json({ user: user })
     }
-    catch(err){
+    catch (err) {
         return res.status(500).send(String(err))
     }
 })
