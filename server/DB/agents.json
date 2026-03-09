@@ -4,15 +4,48 @@
     "agentCode": "abc",
     "fullName": "hagay kohelet",
     "role": "admin",
-    "createdAt": "2026-03-08T08:47:57.350Z",
-    "hashPassword": "$2a$10$d6SUwAV3BM0Dr347ApPqY.j9C35ymmzdrb/n7IDL8WvoaBym5Rkny"
+    "password": "$2a$10$d6SUwAV3BM0Dr347ApPqY.j9C35ymmzdrb/n7IDL8WvoaBym5Rkny"
   },
   {
     "id": 2,
     "agentCode": "mn",
     "fullName": "zack ws",
     "role": "agent",
-    "createdAt": "2026-03-08T08:51:24.547Z",
-    "hashPassword": "$2a$10$h2iIv6xwGg/5X2KAWZguLO.dXDMVlx8R.ds5p615y71bRypFBccmW"
+    "password": "$2a$10$h2iIv6xwGg/5X2KAWZguLO.dXDMVlx8R.ds5p615y71bRypFBccmW"
+  },
+  {
+    "agentCode": "something",
+    "fullName": "agent1",
+    "role": "admin",
+    "id": 2,
+    "password": "ztvmg1"
+  },
+  {
+    "agentCode": "something",
+    "fullName": "agent1",
+    "role": "admin",
+    "id": 2,
+    "password": "ztvmg1"
+  },
+  {
+    "agentCode": "something",
+    "fullName": "agent1",
+    "role": "admin",
+    "id": 2,
+    "password": "ztvmg1"
+  },
+  {
+    "agentCode": "something",
+    "fullName": "agent1",
+    "role": "admin",
+    "id": 3,
+    "password": "ztvmg1"
+  },
+  {
+    "agentCode": "something",
+    "fullName": "agent1",
+    "role": "admin",
+    "id": 4,
+    "password": "ztvmg1"
   }
 ]

@@ -3,7 +3,7 @@ import { checkBodyReports } from '../middleware/checkBodyReports.js';
 import { verifyToken } from '../utils/token.js';
 import { upload } from '../utils/handle_image.js';
 import fs from 'fs/promises'
-import {readCSV, uploadFile} from '../utils/handle_csv.js';
+import { readCSV, uploadFile } from '../utils/handle_csv.js';
 
 let id = 0
 const reportRoute = express()
@@ -37,8 +37,13 @@ reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, asy
 
 reportRoute.post('/csv', verifyToken, uploadFile.single("file"), async (req, res) => {
     try {
-        const data = await readCSV(req.file.path)
-        return res.send(data)
+        const file = req.file
+        if (!file) {
+            return res.status(400).json({ error: 'you need upload a file' })
+        }
+        const data = await readCSV(file.buffer)
+        
+        return res.status(201).json({importedCount:[data.length],reports:data})
     }
     catch (err) {
         return res.status(500).json({ error: String(err) })

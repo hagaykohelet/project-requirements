@@ -13,7 +13,7 @@ authRoute.post('/login', checkBodyAuth, async (req, res) => {
         const data = await JSON.parse(response)
         for (let agent of data) {
 
-            if (agent.agentCode === body.agentCode && await verifyHashPassword(body.password, agent.hashPassword)) {
+            if (agent.agentCode === body.agentCode && await verifyHashPassword(body.password, agent.password)) {
                 const token = createToken(agent)
                 return res.status(200).json({ token: token, user: agent.id, agentCode: agent.agentCode, fullName: agent.fullName, role: agent.role })
             }
