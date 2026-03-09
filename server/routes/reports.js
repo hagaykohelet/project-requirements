@@ -3,11 +3,12 @@ import { checkBodyReports } from '../middleware/checkBodyReports.js';
 import { verifyToken } from '../utils/token.js';
 import { upload } from '../utils/handle_image.js';
 import fs from 'fs/promises'
-
+let id = 0
 const reportRoute = express()
 
 reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, async (req, res) => {
     try {
+        id += 1
         const payload = req.user
         const newObj = req.body
         const image = req.file
@@ -17,9 +18,9 @@ reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, asy
         }
         console.log(image)
         const report = {
-            id: 1, userid: payload.id,
+            id: id, userid: payload.id,
             category: newObj.category, urgency: newObj.urgency,
-            message: newObj.message, imagePath: image.buffer ,sourceType:image.mimetype, 
+            message: newObj.message, imagePath: image.buffer, sourceType: image.mimetype,
             createdAt: new Date().toLocaleString()
         }
         const response = await fs.readFile('./DB/reports.json')
