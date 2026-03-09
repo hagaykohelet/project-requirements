@@ -3,6 +3,7 @@ import { checkBodyReports } from '../middleware/checkBodyReports.js';
 import { verifyToken } from '../utils/token.js';
 import { upload } from '../utils/handle_image.js';
 import fs from 'fs/promises'
+import readCSV from '../utils/handle_csv.js';
 let id = 0
 const reportRoute = express()
 
@@ -33,7 +34,15 @@ reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, asy
     }
 })
 
-
+reportRoute.post('/csv', verifyToken, upload.single("file"), async (req, res) => {
+    try {
+        const data = await readCSV(req.file)
+        return res.send(data)
+    }
+    catch (err) {
+        return res.status(500).json({ error: String(err) })
+    }
+})
 
 
 
