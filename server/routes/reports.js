@@ -1,11 +1,13 @@
-import express, { json } from 'express';
+import express from 'express';
 import { checkBodyReports } from '../middleware/checkBodyReports.js';
 import { verifyToken } from '../utils/token.js';
 import { upload } from '../utils/handle_image.js';
 import fs from 'fs/promises'
-import readCSV from '../utils/handle_csv.js';
+import {readCSV, uploadFile} from '../utils/handle_csv.js';
+
 let id = 0
 const reportRoute = express()
+
 
 reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, async (req, res) => {
     try {
@@ -17,11 +19,10 @@ reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, asy
         if (!image) {
             return res.status(400).json({ error: "no image upload" })
         }
-        console.log(image)
         const report = {
             id: id, userid: payload.id,
             category: newObj.category, urgency: newObj.urgency,
-            message: newObj.message, imagePath: image.buffer, sourceType: image.mimetype,
+            message: newObj.message, imagePath: image.path, sourceType: image.mimetype,
             createdAt: new Date().toLocaleString()
         }
         const response = await fs.readFile('./DB/reports.json')
@@ -34,9 +35,9 @@ reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, asy
     }
 })
 
-reportRoute.post('/csv', verifyToken, upload.single("file"), async (req, res) => {
+reportRoute.post('/csv', verifyToken, uploadFile.single("file"), async (req, res) => {
     try {
-        const data = await readCSV(req.file)
+        const data = await readCSV(req.file.path)
         return res.send(data)
     }
     catch (err) {
