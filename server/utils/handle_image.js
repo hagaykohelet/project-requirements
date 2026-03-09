@@ -12,4 +12,4 @@ const filefilter = (req, file, cb) => {
 }
 
 const upload = multer({ storage, filefilter })
-export {upload, filefilter}
+export {upload}
