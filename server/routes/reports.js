@@ -89,34 +89,33 @@ reportRoute.get('/report', verifyToken, async (req, res) => {
         const reports = await JSON.parse(await fs.readFile('./DB/reports.json'))
         let filteredReport;
         if (user.role === "admin") {
-            filteredReport = reports.filter((item) => { if (item.userid === filterQuery.id || item.category.toLowerCase() === filterQuery.category || item.urgency.toLowerCase() === filterQuery.urgency) return item })
-            }
-        else{
-            filteredReport = reports.filter((item)=> 
-                {if(item.userid === user.id && (item.category.toLowerCase() === filterQuery.category || item.urgency.toLowerCase() === filterQuery.urgency)) return item })
+            filteredReport = reports.filter((item) => { if (item.userid === filterQuery.id || item.category.toLowerCase() === filterQuery.category.toLowerCase() || item.urgency.toLowerCase() === filterQuery.urgency.toLowerCase()) return item })
         }
-        return res.status(200).json({reports:filteredReport})
+        else {
+            filteredReport = reports.filter((item) => { if (item.userid === user.id && (item.category.toLowerCase() === filterQuery.category.toLowerCase() || item.urgency.toLowerCase() === filterQuery.urgency.toLowerCase())) return item })
+        }
+        return res.status(200).json({ reports: filteredReport })
     } catch (err) {
         return res.status(400).json({ error: String(err) })
     }
 })
 
-reportRoute.get('/:id',verifyToken, async(req, res)=>{
-    try{
-        const {id} = req.params
+reportRoute.get('/:id', verifyToken, async (req, res) => {
+    try {
+        const { id } = req.params
         const user = req.user
         console.log(user)
         const allReports = await JSON.parse(await fs.readFile('./DB/reports.json'))
-        const report = allReports.filter((item)=> item.id == id)
-        if (user.role === "agent" && report.userid !== user.id){
-            return res.status(403).json({message:"access denied"})
+        const report = allReports.filter((item) => item.id == id)
+        if (user.role === "agent" && report.userid !== user.id) {
+            return res.status(403).json({ message: "access denied" })
         }
-        if (report.length === 0){
-            return res.status(404).json({error:"this report not exist"})
+        if (report.length === 0) {
+            return res.status(404).json({ error: "this report not exist" })
         }
-        return res.status(200).json({report:report})
-    }catch(err){
-        return res.status(400).json({error: String(err)})
+        return res.status(200).json({ report: report })
+    } catch (err) {
+        return res.status(400).json({ error: String(err) })
     }
 })
 
