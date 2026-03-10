@@ -21,7 +21,7 @@ authRoute.post('/login', checkBodyAuth, async (req, res) => {
         return res.status(401).json({ error: "this user not exist" })
     }
     catch (err) {
-        return res.status(500).send(String(err))
+        return res.status(400).send(String(err))
     }
 })
 
@@ -31,7 +31,7 @@ authRoute.get('/me', verifyToken, (req, res) => {
         return res.status(200).json({ user: user })
     }
     catch (err) {
-        return res.status(500).send(String(err))
+        return res.status(400).send(String(err))
     }
 })
 

@@ -10,23 +10,63 @@
     "createdAt": "9.3.2026, 17:50:08"
   },
   {
-    "id": 1,
-    "userid": 2,
-    "category": "intelligence",
-    "urgency": "high",
-    "message": "check 2",
-    "imagePath": "images\\לוגו_בחדרי_חרדים.jpg",
-    "sourceType": "image/jpeg",
-    "createdAt": "9.3.2026, 17:51:33"
+    "id": 2,
+    "userid": 1,
+    "category": "Technical Support",
+    "urgency": "",
+    "message": "The main server is down and users cannot login.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "10.3.2026, 11:22:06"
   },
   {
-    "id": 1,
-    "userid": 2,
-    "category": "intelligence",
-    "urgency": "high",
-    "message": "check 2",
-    "imagePath": "images\\לוגו_בחדרי_חרדים.jpg",
-    "sourceType": "image/jpeg",
-    "createdAt": "9.3.2026, 21:50:56"
+    "id": 3,
+    "userid": 1,
+    "category": "Billing",
+    "urgency": "Medium",
+    "message": "I was charged twice for my monthly subscription.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "10.3.2026, 11:22:06"
+  },
+  {
+    "id": 4,
+    "userid": 1,
+    "category": "Feedback",
+    "urgency": "Low",
+    "message": "The new interface looks great but the font is a bit small.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "10.3.2026, 11:22:06"
+  },
+  {
+    "id": 5,
+    "userid": 1,
+    "category": "Security",
+    "urgency": "Critical",
+    "message": "Unauthorized access attempt detected from a suspicious IP.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "10.3.2026, 11:22:06"
+  },
+  {
+    "id": 6,
+    "userid": 1,
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "message": "What are your office hours during the holidays?",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "10.3.2026, 11:22:06"
+  },
+  {
+    "id": 7,
+    "userid": 1,
+    "category": "Technical Support",
+    "urgency": "Medium",
+    "message": "The mobile app crashes when I try to upload a photo.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "10.3.2026, 11:22:06"
   }
 ]
