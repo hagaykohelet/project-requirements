@@ -1,0 +1,34 @@
+.home-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.agentCode-password {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.agentCode-password input{
+    margin-left: 1em;
+}
+.btn-sub {
+    margin-top: 20%;
+    background-color: rgb(30, 30, 118);
+    color: rgb(230, 230, 230);
+    width: 100px;
+    height: 50px;
+    border: 1px solid rgb(30, 30, 118);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 1s;
+}
+
+.btn-sub:hover{
+    transform: translateY(-3px);
+}
