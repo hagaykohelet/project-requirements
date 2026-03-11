@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import '../style/Home.css'
 import { useNavigate } from 'react-router-dom'
 
-function Home() {
+function Login() {
     const [success, setSuccess] = useState<boolean>(true)
     const [password, setPassword] = useState<string>()
     const [agentCode, setAgentCode] = useState<string>()
@@ -29,10 +29,10 @@ function Home() {
 
             <div className="agentCode-password">
                 <label htmlFor="agent-code">please enter your agent code:
-                    <input type="text" id="agent-code" placeholder="a-101" onChange={(e) => { setAgentCode(e.target.value) }} />
+                    <input type="text" id="agent-code" placeholder="a-101" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setAgentCode(e.target.value) }} />
                 </label>
                 <label htmlFor="password">please enter your password:
-                    <input type="text" id="password" placeholder="******" onChange={(e) => { setPassword(e.target.value) }} />
+                    <input type="text" id="password" placeholder="******" onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setPassword(e.target.value) }} />
                 </label>
             </div>
             <button className='btn-sub' onClick={login}>login</button>
@@ -41,4 +41,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Login
