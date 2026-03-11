@@ -1,17 +1,22 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Login from "./pages/Login"
 import './App.css'
-import Reports from "./pages/Reports"
+import { ContextProvider } from "./Provider/context"
+import AgentDashboard from "./pages/AgentDashboard"
+import NewReport from "./pages/NewReport"
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/reports" element={<Reports />} />
-      </Routes>
+        <ContextProvider >
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/agentDashboard" element={<AgentDashboard />} />
+            <Route path="/new-report-page" element={<NewReport />} />
+          </Routes>
+        </ContextProvider>
       </BrowserRouter>
     </>
   )
