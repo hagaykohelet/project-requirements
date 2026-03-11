@@ -68,5 +68,85 @@
     "imagePath": null,
     "sourceType": "text/csv",
     "createdAt": "10.3.2026, 11:22:06"
+  },
+  {
+    "id": 8,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "low",
+    "message": "helo",
+    "imagePath": "images\\The-Observer-Design-Pattern1-1024x512.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "11.3.2026, 16:40:21"
+  },
+  {
+    "id": 9,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "low",
+    "message": "helo",
+    "imagePath": "images\\The-Observer-Design-Pattern1-1024x512.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "11.3.2026, 16:40:40"
+  },
+  {
+    "id": 10,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "low",
+    "message": "helo",
+    "imagePath": "images\\The-Observer-Design-Pattern1-1024x512.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "11.3.2026, 16:58:25"
+  },
+  {
+    "id": 11,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "low",
+    "message": "dfdfdafa",
+    "imagePath": "images\\×¦×××× ××¡× 2025-04-24 142800.png",
+    "sourceType": "image/png",
+    "createdAt": "11.3.2026, 17:07:28"
+  },
+  {
+    "id": 12,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "low",
+    "message": "helo",
+    "imagePath": "images\\The-Observer-Design-Pattern1-1024x512.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "11.3.2026, 17:26:21"
+  },
+  {
+    "id": 13,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "medium",
+    "message": "dvcxzc",
+    "imagePath": "images\\The-Observer-Design-Pattern1-1024x512.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "11.3.2026, 17:26:46"
+  },
+  {
+    "id": 14,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "medium",
+    "message": "wdaf",
+    "imagePath": "images\\The-Observer-Design-Pattern1-1024x512.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "11.3.2026, 17:28:19"
+  },
+  {
+    "id": 15,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "medium",
+    "message": "wdaf",
+    "imagePath": "images\\×¦×××× ××¡× 2026-03-08 100139.png",
+    "sourceType": "image/png",
+    "createdAt": "11.3.2026, 17:28:50"
   }
 ]

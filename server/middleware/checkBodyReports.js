@@ -1,6 +1,6 @@
 export function checkBodyReports(req, res, next) {
     const newObj = req.body;
-    console.log(newObj)
+    console.log(req.body)
     const newObjKeys = Object.keys(newObj)
     const allowKeys = ["message", "category", "urgency"]
     const categoryKeys = ["intelligence", "logistics", "alert"]

@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import '../style/Login.css'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../Provider/context'
+
+
 function Login() {
     const [success, setSuccess] = useState<boolean>(true)
     const [password, setPassword] = useState<string>()
@@ -20,7 +22,7 @@ function Login() {
         }
         else {
             const data = await res.json()
-            localStorage.setItem("token", data.token)
+            localStorage.setItem("token", JSON.stringify(data.token))
             setUser({
                 id: data.user.id, agentCode: data.user.agentCode,
                 fullName: data.user.fullName,

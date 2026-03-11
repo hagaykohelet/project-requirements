@@ -10,7 +10,6 @@ const reportRoute = express()
 
 reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, async (req, res) => {
     try {
-        id += 1
         const payload = req.user
         const newObj = req.body
         const image = req.file
@@ -37,6 +36,7 @@ reportRoute.post('/', verifyToken, upload.single("image"), checkBodyReports, asy
         await fs.writeFile('./DB/reports.json', JSON.stringify(data, null, 2))
         return res.status(201).json({ report: report })
     } catch (err) {
+        console.log(err)
         return res.status(400).json({ error: String(err) })
     }
 })
