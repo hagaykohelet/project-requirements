@@ -9,11 +9,13 @@ export function createToken(obj) {
 
 export function verifyToken(req, res, next){
         const token = req.headers.token
+        console.log(token)
         if(token === null){
             return res.status(401).json({error:"you need token"})
         }
         jwt.verify(token, secretKey, (err, user)=>{
             if(err){
+                console.log(err)
                 return res.status(403).json({err})
             }
             req.user = user

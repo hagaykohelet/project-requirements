@@ -1,9 +1,9 @@
 import express from 'express';
+import fs from 'fs/promises';
 import { checkBodyReports } from '../middleware/checkBodyReports.js';
-import { verifyToken } from '../utils/token.js';
-import { upload } from '../utils/handle_image.js';
-import fs from 'fs/promises'
 import { readCSV, uploadFile } from '../utils/handle_csv.js';
+import { upload } from '../utils/handle_image.js';
+import { verifyToken } from '../utils/token.js';
 
 const reportRoute = express()
 
@@ -77,6 +77,7 @@ reportRoute.post('/csv', verifyToken, uploadFile.single("file"), async (req, res
         return res.status(201).json({ importedCount: [newData.length], reports: allNewReports })
     }
     catch (err) {
+        console.log(err)
         return res.status(400).json({ error: String(err) })
     }
 })
@@ -88,14 +89,30 @@ reportRoute.get('/report', verifyToken, async (req, res) => {
         const filterQuery = req.query
         const reports = await JSON.parse(await fs.readFile('./DB/reports.json'))
         let filteredReport;
+
         if (user.role === "admin") {
-            filteredReport = reports.filter((item) => { if (item.userid === filterQuery.id || item.category.toLowerCase() === filterQuery.category.toLowerCase() || item.urgency.toLowerCase() === filterQuery.urgency.toLowerCase()) return item })
+            if (Object.keys(filterQuery).length >= 1) {
+                filteredReport = reports.filter((item) => { if (item.userid === Number(filterQuery.id) || item.category.toLowerCase() === filterQuery.category || item.urgency.toLowerCase() === filterQuery.urgency) return item })
+            }
+            else {
+                filteredReport = reports
+            }
         }
         else {
-            filteredReport = reports.filter((item) => { if (item.userid === user.id && (item.category.toLowerCase() === filterQuery.category.toLowerCase() || item.urgency.toLowerCase() === filterQuery.urgency.toLowerCase())) return item })
+            if (Object.keys(filterQuery).length >= 1) {
+                filteredReport = reports.filter((item) => { if (item.userid == user.id && (item.category.toLowerCase() === filterQuery.category || item.urgency.toLowerCase() === filterQuery.urgency)) {
+                    console.log(item)
+                } })
+            }
+            else {
+                console.log("here")
+                filteredReport = reports.filter((item) => {if(item.userid == user.id)return item})
+            }
         }
+        console.log(filteredReport)
         return res.status(200).json({ reports: filteredReport })
     } catch (err) {
+        console.log(err)
         return res.status(400).json({ error: String(err) })
     }
 })

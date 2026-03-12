@@ -5,7 +5,8 @@ export function validatePostRequesrt(req, res, next) {
     if (!newUser) {
         return res.status(400).json({ error: "please enter some agent" })
     }
-    if (newUserKeys.length < 3) {
+    if (newUserKeys.length < 2) {
+        console.log(newUserKeys)
         return res.status(400).json({ error: "missing keys" })
     }
     for (let key of allowKeys) {

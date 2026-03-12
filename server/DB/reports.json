@@ -148,5 +148,165 @@
     "imagePath": "images\\×¦×××× ××¡× 2026-03-08 100139.png",
     "sourceType": "image/png",
     "createdAt": "11.3.2026, 17:28:50"
+  },
+  {
+    "id": 16,
+    "userid": 1,
+    "category": "Technical Support",
+    "urgency": "High",
+    "message": "The main server is down and users cannot login.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 19:19:43"
+  },
+  {
+    "id": 17,
+    "userid": 1,
+    "category": "Billing",
+    "urgency": "Medium",
+    "message": "I was charged twice for my monthly subscription.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 19:19:43"
+  },
+  {
+    "id": 18,
+    "userid": 1,
+    "category": "Feedback",
+    "urgency": "Low",
+    "message": "The new interface looks great but the font is a bit small.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 19:19:43"
+  },
+  {
+    "id": 19,
+    "userid": 1,
+    "category": "Security",
+    "urgency": "Critical",
+    "message": "Unauthorized access attempt detected from a suspicious IP.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 19:19:43"
+  },
+  {
+    "id": 20,
+    "userid": 1,
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "message": "What are your office hours during the holidays?",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 19:19:43"
+  },
+  {
+    "id": 21,
+    "userid": 1,
+    "category": "Technical Support",
+    "urgency": "Medium",
+    "message": "The mobile app crashes when I try to upload a photo.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 19:19:43"
+  },
+  {
+    "id": 22,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "medium",
+    "message": "dscdsc",
+    "imagePath": "images\\××××_××××¨×_××¨×××.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "11.3.2026, 21:21:24"
+  },
+  {
+    "id": 23,
+    "userid": 1,
+    "category": "intelligence",
+    "urgency": "medium",
+    "message": "dscdsc",
+    "imagePath": "images\\××××_××××¨×_××¨×××.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "11.3.2026, 21:22:53"
+  },
+  {
+    "id": 24,
+    "userid": 1,
+    "category": "Technical Support",
+    "urgency": "",
+    "message": "The main server is down and users cannot login.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 21:26:03"
+  },
+  {
+    "id": 25,
+    "userid": 1,
+    "category": "Billing",
+    "urgency": "Medium",
+    "message": "I was charged twice for my monthly subscription.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 21:26:03"
+  },
+  {
+    "id": 26,
+    "userid": 1,
+    "category": "Feedback",
+    "urgency": "Low",
+    "message": "The new interface looks great but the font is a bit small.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 21:26:03"
+  },
+  {
+    "id": 27,
+    "userid": 1,
+    "category": "Security",
+    "urgency": "Critical",
+    "message": "Unauthorized access attempt detected from a suspicious IP.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 21:26:03"
+  },
+  {
+    "id": 28,
+    "userid": 1,
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "message": "What are your office hours during the holidays?",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 21:26:03"
+  },
+  {
+    "id": 29,
+    "userid": 1,
+    "category": "Technical Support",
+    "urgency": "Medium",
+    "message": "The mobile app crashes when I try to upload a photo.",
+    "imagePath": null,
+    "sourceType": "text/csv",
+    "createdAt": "11.3.2026, 21:26:03"
+  },
+  {
+    "id": 30,
+    "userid": 2,
+    "category": "intelligence",
+    "urgency": "medium",
+    "message": "check message",
+    "imagePath": "images\\××××_××××¨×_××¨×××.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "12.3.2026, 10:01:19"
+  },
+  {
+    "id": 31,
+    "userid": 2,
+    "category": "alert",
+    "urgency": "medium",
+    "message": "check ",
+    "imagePath": "images\\××××_××××¨×_××¨×××.jpg",
+    "sourceType": "image/jpeg",
+    "createdAt": "12.3.2026, 11:02:27"
   }
 ]

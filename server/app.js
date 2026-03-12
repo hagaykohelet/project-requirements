@@ -7,10 +7,10 @@ import adminRoute from './routes/admin.js';
 const app = express()
 const PORT = 3000
 
+app.use(cors())
 app.use(express.static("public"))
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+// app.use(express.urlencoded({ extended: true }))
 app.use("/auth", authRoute)
 app.use('/reports', reportRoute)
 app.use('/admin', adminRoute)

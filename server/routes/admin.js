@@ -16,11 +16,13 @@ adminRoute.post('/users', verifyToken, validatePostRequesrt, async (req, res) =>
         }
         const { password } = newUser
         const userForReturn = { ...newUser }
-        if (!password) {
+        console.log(password)
+        if (!password || password == null) {
             newUser.passwordHash = await createHashPassword(enAtbash(newUser.fullName))
+            delete newUser.password
         }
         else {
-            newUser.passwordHash = await createHashPassword(newUser.password)
+            newUser.passwordHash = await createHashPassword(String(newUser.password))
             delete newUser.password
         }
         const data = await JSON.parse(await fs.readFile('./DB/agents.json'))
@@ -36,6 +38,7 @@ adminRoute.post('/users', verifyToken, validatePostRequesrt, async (req, res) =>
         await fs.writeFile('./DB/agents.json', JSON.stringify(data, null, 2))
         return res.status(201).json({ user: userForReturn })
     } catch (err) {
+        console.log(err)
         res.status(400).json({ error: String(err) })
     }
 })

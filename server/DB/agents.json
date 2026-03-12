@@ -5,5 +5,99 @@
     "fullName": "hagay kohelet",
     "role": "admin",
     "passwordHash": "$2a$10$K74ydyZ2l4ErKuZDn8QI0.DPx9PAqhHYRFmXEjy9nxc3Mkc3XdslG"
+  },
+  {
+    "agentCode": "123",
+    "fullName": "nick",
+    "role": "agent",
+    "passwordHash": "$2b$10$/VbDOqSj/NYY0ARe.eJJm.PRkb9MSmtTdPTv9H2ncXAHEQHR0ejD6",
+    "id": 2
+  },
+  {
+    "agentCode": "123",
+    "fullName": "nick",
+    "role": "agent",
+    "password": null,
+    "passwordHash": "$2b$10$1tpSYQ03nqNlk/8w5pOwxeQBNyYZwrSwYZCojkN81cdWkjKiKl9ti",
+    "id": 3
+  },
+  {
+    "agentCode": "123",
+    "fullName": "nick",
+    "role": "agent",
+    "password": null,
+    "passwordHash": "$2b$10$xoEANTtyN6.fEZvQoZa4iu7fW/CnaGwth3C0g2QhVinDb4q9dMc.y",
+    "id": 4
+  },
+  {
+    "agentCode": "123",
+    "fullName": "nick",
+    "role": "agent",
+    "password": null,
+    "passwordHash": "$2b$10$U4b80IMEX5muqJ6VmgRk9uV6OrremoDfo0oGdE6agCkrBFfjtM9sG",
+    "id": 5
+  },
+  {
+    "agentCode": "123",
+    "fullName": "nick",
+    "role": "agent",
+    "passwordHash": "$2b$10$kl9tn6zNn44qML82VJ8vFOASQVyTxVuLkCZ.I8QevDtRZZ2Hsz/BO",
+    "id": 6
+  },
+  {
+    "agentCode": "hagay",
+    "fullName": "hagay",
+    "role": "admin",
+    "passwordHash": "$2b$10$/xKy8OVbvTU0UTbRia05R.fU/ieZ3mzYNETxs9oO.QEAsLE6pcLmK",
+    "id": 7
+  },
+  {
+    "agentCode": "check",
+    "fullName": "check",
+    "role": "admin",
+    "passwordHash": "$2b$10$1owRnghjLZ7lNnLJl.cIFO9aplBVcmCAt3Zerkz0pj3bCBQolnviO",
+    "id": 8
+  },
+  {
+    "agentCode": "new",
+    "fullName": "new",
+    "role": "admin",
+    "passwordHash": "$2b$10$eiwEnuDZKICaIKISzZ51Ruz.a6j8mMxWggcUxS6gW4EFC9EDqkDta",
+    "id": 9
+  },
+  {
+    "agentCode": "new",
+    "fullName": "new",
+    "role": "admin",
+    "passwordHash": "$2b$10$GYzqUYlsXk4bu6Ln2lYiEufLLAjTI74O9xGADAfZ1RXc1xMchx.dq",
+    "id": 10
+  },
+  {
+    "agentCode": "new",
+    "fullName": "new",
+    "role": "admin",
+    "passwordHash": "$2b$10$Dk/GxA26itj0s1l710IJsuba1q6Qs4c5Bs1YYlamwFC/C02Gm8owi",
+    "id": 11
+  },
+  {
+    "agentCode": "ad",
+    "fullName": "ad",
+    "role": "agent",
+    "passwordHash": "$2b$10$6Va14qjA/S8J0azR5IY2u.frmwG6BKfQmaXUX8ZoWwpFXJU3ETzue",
+    "id": 12
+  },
+  {
+    "agentCode": "ad",
+    "fullName": "ad",
+    "role": "agent",
+    "passwordHash": "$2b$10$Ns99W8pCsyWER/miIjaupO0rE6E3WTgfQzNdjXcgqgwIKP2X/8uQO",
+    "id": 13
+  },
+  {
+    "agentCode": "ad",
+    "fullName": "ad",
+    "role": "agent",
+    "passwordHash": "$2b$10$lPtoHkQusi8WJtU.lKpN.OdNWEU5lAQGKJKt9yKjXcCFe1gUpD/Qu",
+    "id": 14
   }
 ]

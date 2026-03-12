@@ -12,6 +12,7 @@ function NewReport() {
 
     const form = new FormData()
     async function postData() {
+        console.log(token, typeof token)
         console.log(category, message, urgency, image)
         form.append("message", message)
         form.append("urgency", urgency)
@@ -24,7 +25,7 @@ function NewReport() {
                 body: form
             })
             const data = await res.json()
-            if (!data.ok) {
+            if (!res.ok) {
                 setAlert("failed")
             }
             else {
@@ -55,7 +56,7 @@ function NewReport() {
                 <option value="high">high</option>
             </select>
             <textarea name="message" onChange={(e) => { setMessage(e.target.value) }} placeholder="enter your message"></textarea>
-            <input type="file" name="image" onChange={(e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) => { if (e.target.files !== null && e.target.files[0] !== null) { setImage(e.target.files[0]) } }} />
+            <input type="file" name="image" className="image" onChange={(e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) => { if (e.target.files !== null && e.target.files[0] !== null) { setImage(e.target.files[0]) } }} />
             <button onClick={postData}>send report</button>
             <p>{alert}</p>
 
