@@ -91,7 +91,7 @@ reportRoute.get('/report', verifyToken, async (req, res) => {
         let filteredReport;
 
         if (user.role === "admin") {
-            if (Object.keys(filterQuery).length >= 1) {
+            if (Object.keys(filterQuery).length > 0) {
                 filteredReport = reports.filter((item) => { if (item.userid === Number(filterQuery.id) || item.category.toLowerCase() === filterQuery.category || item.urgency.toLowerCase() === filterQuery.urgency) return item })
             }
             else {
@@ -105,7 +105,6 @@ reportRoute.get('/report', verifyToken, async (req, res) => {
                 } })
             }
             else {
-                console.log("here")
                 filteredReport = reports.filter((item) => {if(item.userid == user.id)return item})
             }
         }

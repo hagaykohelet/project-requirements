@@ -62,13 +62,12 @@ function AdminUsers() {
 
     useEffect(() => {
         fetchUsers()
-
+        
     }, [req])
 
     return (
         <div>
             <div>
-
                 <table>
                     <thead>
                         <tr>

@@ -12,8 +12,6 @@ function NewReport() {
 
     const form = new FormData()
     async function postData() {
-        console.log(token, typeof token)
-        console.log(category, message, urgency, image)
         form.append("message", message)
         form.append("urgency", urgency)
         form.append("image", image)

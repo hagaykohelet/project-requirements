@@ -21,7 +21,7 @@ function AgentReports() {
   useEffect(() => {
     agentRepo()
   }, [])
-  
+
 
   return (
     <div>
@@ -36,18 +36,18 @@ function AgentReports() {
           </tr>
         </thead>
         <tbody>
-          {reports?.map((item:Report) => {
-           return (
-             <tr key={item.id}>
-               <td>{item.category}</td>
-               <td>{item.urgency}</td>
-               <td>{item.message}</td>
-               <td><img src={`http://localhost:3000/${item.imagePath}`} alt="image" /></td>
-               <td>{item.createdAt}</td>
-             </tr>
-           )
-         })}
-        </tbody> 
+          {reports?.map((item: Report) => {
+            return (
+              <tr key={item.id}>
+                <td>{item.category}</td>
+                <td>{item.urgency}</td>
+                <td>{item.message}</td>
+                <td><img src={`http://localhost:3000/${item.imagePath}`} alt="image" /></td>
+                <td>{item.createdAt}</td>
+              </tr>
+            )
+          })}
+        </tbody>
       </table>
     </div>
   )
