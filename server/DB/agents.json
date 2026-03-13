@@ -99,5 +99,33 @@
     "role": "agent",
     "passwordHash": "$2b$10$lPtoHkQusi8WJtU.lKpN.OdNWEU5lAQGKJKt9yKjXcCFe1gUpD/Qu",
     "id": 14
+  },
+  {
+    "agentCode": "meir-101",
+    "fullName": "mair piskarov",
+    "role": "admin",
+    "passwordHash": "$2b$10$fCOT0ypHVE/DD6I/OKAwF.K07pLFWNvY6Lesqnh9bugxx17aXDMUq",
+    "id": 15
+  },
+  {
+    "agentCode": "meir-101",
+    "fullName": "mair piskarov",
+    "role": "admin",
+    "passwordHash": "$2b$10$h8qI/zI3I8O6DFHMsPSQ2O9oz6Uuy1jPEHzHxAJUNxtw2etCSwaFu",
+    "id": 16
+  },
+  {
+    "agentCode": "hagay",
+    "fullName": "hagay",
+    "role": "agent",
+    "passwordHash": "$2b$10$vWAL8bWXZ5nghRdZoCOLxeM0OyrHCP/CMSc.kcytS6k0YfSAqc.jO",
+    "id": 17
+  },
+  {
+    "agentCode": "m",
+    "fullName": "m",
+    "role": "agent",
+    "passwordHash": "$2b$10$0Fok76H8y.StnIT/muzZ9.R.fyVlwU2B7uyckjNn9Uzkx5ZIGgDyW",
+    "id": 18
   }
 ]

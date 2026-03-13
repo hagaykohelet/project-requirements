@@ -22,8 +22,8 @@ function App() {
             <Route path="/agentDashboard/new-report-page" element={<NewReport />} />
             <Route path="/agentDashboard/csv-files" element={<UploadCsv />} />
             <Route path="/agentDashboard/agent-reports" element={<AgentReports />} />
-            <Route path="/admin-dashboard" element= {<AdminDashboard />} />
-            <Route path="/admin-dashboard/reports" element={<AdminReports/>} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/admin-dashboard/reports" element={<AdminReports />} />
             <Route path="/admin-dashboard/users" element={<AdminUsers />} />
           </Routes>
         </ContextProvider>

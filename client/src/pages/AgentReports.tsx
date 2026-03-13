@@ -1,25 +1,29 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState  } from "react"
 import type { Report } from "../types/ReportType"
+import GetDataFetch from "../hooks/GetDataFetch"
 
-function AgentReports() {
+function AgentReports(){
   const token = localStorage.getItem("token")
-  const [reports, setReports] = useState<Report[] | undefined>([])
-  async function agentRepo() {
-    const result = await fetch("http://localhost:3000/reports/report", {
-      method: "GET",
-      headers: { token: String(token) }
-    })
-    if (!result.ok) {
-      console.log(result)
-    }
-    else {
-      const data = await result.json()
-      setReports(data.reports)
-    }
-  }
+  // const [reports, setReports] = useState<Report[] | undefined>([])
+  // async function agentRepo() {
+  //   const result = await fetch("http://localhost:3000/reports/report", {
+  //     method: "GET",
+  //     headers: { token: String(token) }
+  //   })
+  //   if (!result.ok) {
+  //     console.log(result)
+  //   }
+  //   else {
+  //     const data = await result.json()
+  //     setReports(data.reports)
+  //   }
+  // }
+  const { error, fetchData, result } = GetDataFetch("http://localhost:3000/reports/report", String(token))
+
 
   useEffect(() => {
-    agentRepo()
+    // agentRepo()
+    fetchData()
   }, [])
 
 
@@ -36,7 +40,8 @@ function AgentReports() {
           </tr>
         </thead>
         <tbody>
-          {reports?.map((item: Report) => {
+          {result?.map((item: Report) => {
+            console.log(item)
             return (
               <tr key={item.id}>
                 <td>{item.category}</td>

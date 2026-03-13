@@ -66,7 +66,7 @@ reportRoute.post('/csv', verifyToken, uploadFile.single("file"), async (req, res
             const newReport = {
                 id: maxId, userid: payload.id,
                 category: data.category, urgency: data.urgency,
-                message: data.message, imagePath: null, sourceType: file.mimetype,
+                message: data.message, imagePath: file.imagePath, sourceType: file.mimetype,
                 createdAt: new Date().toLocaleString()
             }
             maxId += 1

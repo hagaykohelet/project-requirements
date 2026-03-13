@@ -18,7 +18,6 @@ function UploadCsv() {
             console.log(err)
         }}
 
-
     return (
         <div>
             <input type="file" name="csvFile" className="csvFile" onChange={(e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) => { if (e.target.files !== null && e.target.files[0] !== null) { setCsv(e.target.files[0]) } }} />
